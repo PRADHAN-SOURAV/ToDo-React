@@ -1,13 +1,11 @@
-function ToDoItem() {
-  let todoItem ="Buy Milk";
-  let todoDate = "4/10/2001";
+function ToDoItem({todoItem,todoDate}) {
   return (
-    <div class="container">
-    <div class="row">
-      <div class="col-6">{todoItem}</div>
-      <div class="col-4">{todoDate}</div>
-      <div class="col-2">
-        <button type="button" class="btn btn-danger">
+    <div className="container">
+    <div className="row">
+      <div className="col-6">{todoItem}</div>
+      <div className="col-4">{todoDate}</div>
+      <div className="col-2">
+        <button type="button" className="btn btn-danger">
           Delete
         </button>
       </div>

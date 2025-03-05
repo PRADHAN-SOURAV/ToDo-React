@@ -1,19 +1,27 @@
 import "./App.css";
 import AppName from "./components/AppName";
 import AppToDo from "./components/AppToDo";
-import ToDoItem from "./components/ToDoItem";
-import ToDoItem2 from "./components/ToDoItem2";
+import FetctToDoItem from "./components/FetchToDoItem";
 import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
+  const todoItem =[
+    {
+      name: "Buy milk",
+      dueDate: "04/10/2023"
+    },
+    {
+      name: "Buy",
+      dueDate: "04/10/2023"
+    }
+  ];
   return (
+    <>
     <center className="todo-container">
       <AppName></AppName>
       <AppToDo />
-      <div className="item-container">
-      <ToDoItem />
-      <ToDoItem2 />
-      </div>
+      <FetctToDoItem item={todoItem}></FetctToDoItem>
     </center>
+    </>
   );
 }
 
